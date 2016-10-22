@@ -29,6 +29,6 @@ def AddPost(content):
     Args:
       content: The text content of the new post.
     '''
-    query = "INSERT INTO posts (content) VALUES ('%s')" % (content)
-    cursor.execute(query)
+    query = "INSERT INTO posts (content) VALUES (%s)"
+    cursor.execute(query,  (content,))
     db.commit()
