@@ -3,6 +3,7 @@
 #
 
 import psycopg2
+import bleach
 
 ## Database connection
 db = psycopg2.connect('dbname=forum')
@@ -19,7 +20,7 @@ def GetAllPosts():
     '''
     query = 'SELECT * FROM posts ORDER BY time DESC'
     cursor.execute(query)
-    posts = [{'content': str(row[0]), 'time': str(row[1])} for row in cursor.fetchall()]
+    posts = [{'content': str(bleach.clean(row[0])), 'time': str(row[1])} for row in cursor.fetchall()]
     return posts
 
 ## Add a post to the database.
