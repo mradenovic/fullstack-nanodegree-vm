@@ -25,3 +25,14 @@ To run the test, [setup dev environment](#setup-dev-environment) first. You shou
 * `cd /vagrant/tournament`
 * `psql -f tournament.sql`
 * `python tournament_test.py`
+
+### Project: Item Catalog
+
+Item Catalog is the fifth project built during completion of the [Udacity's](https://www.udacity.com/) Nanodegree program [Full Stack Web Developer](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004). To learn how it was built, check [Full Stack Foundations](https://www.udacity.com/courses/full-stack-foundations--ud088) and [Authentication & Authorization: OAuth](https://www.udacity.com/courses/authentication-authorization-oauth--ud330).
+
+
+To run the app, [setup dev environment](#setup-dev-environment) first. You should get terminal prompt that looks something like this: `vagrant@vagrant-ubuntu-trusty-32:~$`. Once connected, run following commands:
+* `cd /vagrant/catalog`
+* `pip install -r requirements.txt`
+* `python populate.py`
+* `python server.py`
